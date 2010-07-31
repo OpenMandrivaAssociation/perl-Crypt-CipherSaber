@@ -11,10 +11,12 @@ License:	    GPL or Artistic
 Group:		    Development/Perl
 Url:		    http://search.cpan.org/dist/%{module}
 Source:		    http://www.cpan.org/modules/by-module/Crypt/%{module}-%{version}.tar.bz2
-%if %{mdkversion} < 1010
-BuildRequires:	perl-devel
-%endif
-BuildRequires:	perl(Test::Warn)
+BuildRequires:  perl(Module::Build)
+BuildRequires:  perl(Test::Simple) >= 0.60
+BuildRequires:  perl(Test::Warn)
+BuildRequires:  perl(Test::Pod)
+BuildRequires:  perl(Test::Pod::Coverage)
+BuildConflicts:  perl(Module::Signature)
 BuildArch:	    noarch
 BuildRoot:	    %{_tmppath}/%{name}-%{version}
 
