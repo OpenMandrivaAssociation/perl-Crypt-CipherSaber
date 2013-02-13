@@ -2,12 +2,12 @@
 
 Name:		perl-%{module}
 Version:	1.00
-Release:	11
+Release:	12
 Summary:	Perl module implementing CipherSaber encryption
 License:	GPL or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{module}
-Source:		http://www.cpan.org/modules/by-module/Crypt/%{module}-%{version}.tar.bz2
+Source0:	http://www.cpan.org/modules/by-module/Crypt/%{module}-%{version}.tar.bz2
 BuildRequires:	perl(Module::Build)
 BuildRequires:	perl(Test::Simple) >= 0.60
 BuildRequires:	perl(Test::Warn)
@@ -15,7 +15,7 @@ BuildRequires:	perl(Test::Pod)
 BuildRequires:	perl(Test::Pod::Coverage)
 BuildRequires:	perl-devel
 BuildConflicts:	perl(Module::Signature)
-BuildArch:		noarch
+BuildArch:	noarch
 
 %description
 The Crypt::CipherSaber module implements CipherSaber encryption, described at
@@ -26,7 +26,7 @@ secure algorithm based on RC4.
 %setup -q -n %{module}-%{version}
 
 %build
-%__perl Makefile.PL INSTALLDIRS=vendor
+perl Makefile.PL INSTALLDIRS=vendor
 %make
 
 %check
@@ -39,8 +39,6 @@ make test
 %doc Changes README
 %{perl_vendorlib}/Crypt
 %{_mandir}/*/*
-
-
 
 %changelog
 * Sun Jan 22 2012 Oden Eriksson <oeriksson@mandriva.com> 1.00-10mdv2012.0
