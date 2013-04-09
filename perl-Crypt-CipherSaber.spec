@@ -14,6 +14,7 @@ BuildRequires:	perl(Test::Warn)
 BuildRequires:	perl(Test::Pod)
 BuildRequires:	perl(Test::Pod::Coverage)
 BuildRequires:	perl-devel
+BuildRequires:	perl(JSON::PP)
 BuildConflicts:	perl(Module::Signature)
 BuildArch:	noarch
 
