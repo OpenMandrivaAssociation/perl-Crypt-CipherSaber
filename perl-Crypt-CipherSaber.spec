@@ -15,6 +15,7 @@ BuildRequires:	perl(Test::Pod)
 BuildRequires:	perl(Test::Pod::Coverage)
 BuildRequires:	perl-devel
 BuildRequires:	perl(JSON::PP)
+BuildRequires:	perl(Digest::SHA)
 BuildArch:	noarch
 
 %description
