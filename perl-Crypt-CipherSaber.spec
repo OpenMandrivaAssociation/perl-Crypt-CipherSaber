@@ -2,7 +2,7 @@
 
 Name:		perl-%{module}
 Version:	1.00
-Release:	12
+Release:	13
 Summary:	Perl module implementing CipherSaber encryption
 License:	GPL or Artistic
 Group:		Development/Perl
@@ -15,7 +15,6 @@ BuildRequires:	perl(Test::Pod)
 BuildRequires:	perl(Test::Pod::Coverage)
 BuildRequires:	perl-devel
 BuildRequires:	perl(JSON::PP)
-BuildConflicts:	perl(Module::Signature)
 BuildArch:	noarch
 
 %description
@@ -31,6 +30,8 @@ perl Makefile.PL INSTALLDIRS=vendor
 %make
 
 %check
+#Remove the debug files which get created, causing failure of the contents check
+rm debug*.list
 make test
 
 %install
