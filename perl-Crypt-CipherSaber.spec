@@ -2,7 +2,7 @@
 
 Name:		perl-%{module}
 Version:	1.00
-Release:	13
+Release:	14
 Summary:	Perl module implementing CipherSaber encryption
 License:	GPL or Artistic
 Group:		Development/Perl
